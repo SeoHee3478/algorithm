@@ -20,3 +20,8 @@
 |[11. 함수만들기](https://github.com/SeoHee3478/algorithm/blob/main/Algorithm_python/00_Python%EA%B8%B0%EC%B4%88%EB%AC%B8%EB%B2%95/README.md#11-%ED%95%A8%EC%88%98%EB%A7%8C%EB%93%A4%EA%B8%B0)|2022.10.03|
 |[12. 람다함수(익명의 함수, 람다 표현식)](https://github.com/SeoHee3478/algorithm/blob/main/Algorithm_python/00_Python%EA%B8%B0%EC%B4%88%EB%AC%B8%EB%B2%95/README.md#12-%EB%9E%8C%EB%8B%A4%ED%95%A8%EC%88%98%EC%9D%B5%EB%AA%85%EC%9D%98-%ED%95%A8%EC%88%98-%EB%9E%8C%EB%8B%A4-%ED%91%9C%ED%98%84%EC%8B%9D-%EB%93%B1%EB%93%B1)|2022.10.03|
 
+## 2. 코드 구현력 기르기
+|제목|날짜|
+|------|---|
+|[1. k번째 약수](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/02_%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84%EB%A0%A5%EA%B8%B0%EB%A5%B4%EA%B8%B0#-1-k%EB%B2%88%EC%A7%B8-%EC%95%BD%EC%88%98)|2022.10.04|
+|[2. k번째 수](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/02_%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84%EB%A0%A5%EA%B8%B0%EB%A5%B4%EA%B8%B0#-2-k%EB%B2%88%EC%A7%B8-%EC%88%98)|2022.10.04|
