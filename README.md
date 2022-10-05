@@ -25,7 +25,7 @@
 |------|---|
 |[1. k번째 약수](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/02_%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84%EB%A0%A5%EA%B8%B0%EB%A5%B4%EA%B8%B0#-1-k%EB%B2%88%EC%A7%B8-%EC%95%BD%EC%88%98)|2022.10.04|
 |[2. k번째 수](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/02_%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84%EB%A0%A5%EA%B8%B0%EB%A5%B4%EA%B8%B0#-2-k%EB%B2%88%EC%A7%B8-%EC%88%98)|2022.10.04|
-|[3. K번째 큰 수](hhttps://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/02_%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84%EB%A0%A5%EA%B8%B0%EB%A5%B4%EA%B8%B0#-3-k%EB%B2%88%EC%A7%B8-%ED%81%B0-%EC%88%98)|2022.10.05|
+|[3. K번째 큰 수](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/02_%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84%EB%A0%A5%EA%B8%B0%EB%A5%B4%EA%B8%B0#-3-k%EB%B2%88%EC%A7%B8-%ED%81%B0-%EC%88%98)|2022.10.05|
 |[4. 대표값](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/02_%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84%EB%A0%A5%EA%B8%B0%EB%A5%B4%EA%B8%B0#-4-%EB%8C%80%ED%91%9C%EA%B0%92)|2022.10.05|
 |[5. 정다면체](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/02_%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84%EB%A0%A5%EA%B8%B0%EB%A5%B4%EA%B8%B0#-5-%EC%A0%95%EB%8B%A4%EB%A9%B4%EC%B2%B4)|2022.10.05|
 |[6. 자릿수의 합](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/02_%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84%EB%A0%A5%EA%B8%B0%EB%A5%B4%EA%B8%B0#-6-%EC%9E%90%EB%A6%BF%EC%88%98%EC%9D%98-%ED%95%A9)|2022.10.05|
