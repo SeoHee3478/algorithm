@@ -1,24 +1,6 @@
 # 🍒 1. K번째 약수
 두 개의 자연수 N과 K가 주어졌을 때, N의 약수들 중 K번째로 작은 수를 출력하는 프로그램을 작성하시오.
 
-### 🍕 내가 작성한 코드
-
-```python
-n, k = input().split()
-n = int(n)
-k = int(k)
-a = []
-
-for i in range(1, n+1):
-    if n%i==0:
-        a.append(i)
-
-if len(a)<k:
-    print("-1")
-else:
-    print(a[k-1])
-```
-
 ### 🍕 정답 코드
 
 ```python
@@ -187,22 +169,6 @@ print(arrMin)
 N명의 학생의 수학점수가 주어집니다. N명의 학생들의 평균(소수 첫째자리 반올림)을 구하고, N명의 학생 중 평균에 가장 가까운 학생은 몇 번째 학생인지 출력하는 프로그램을 작성하세 요.
 평균과 가장 가까운 점수가 여러 개일 경우 먼저 점수가 높은 학생의 번호를 답으로 하고, 높 은 점수를 가진 학생이 여러 명일 경우 그 중 학생번호가 빠른 학생의 번호를 답으로 합니다.
 
-### 🍕 내가 짠 코드
-
-```python
-# 대표값 구하기
-n = int(input())
-scores = list(map(int, input().split()))
-Avg=sum(scores)/len(scores) 
-minDiff=float('inf')
-a=[]
-
-for index, value in enumerate(scores):
-    print(index, value, value-scoresAvg)
-```
-
-enumerate까지 가져왔는데, 평균값과 학생의 점수 차이를 어디에다가 저장해야할지 몰라서 문제 해결 못함…
-
 ### 🍕 정답 코드
 
 ```python
@@ -227,7 +193,7 @@ print(ave,res)
 ```
 
 ### 📝 배운점
-
+- enumerate까지 가져왔는데, 평균값과 학생의 점수 차이를 어디에다가 저장해야할지 몰라서 문제 해결 못함…<br/>
 1. 평균값 구할 때
     - round값 이용해서 반올림x
         - 소수 첫째자리, 둘째자리 반올림 하는 법
@@ -258,43 +224,6 @@ print(ave,res)
 두 개의 정 N면체와 정 M면체의 두 개의 주사위를 던져서 나올 수 있는 눈의 합 중 가장 확률이 높은 숫자를 출력하는 프로그램을 작성하세요.
 정답이 여러 개일 경우 오름차순으로 출력합니다.
 
-▣ 입력설명
-첫 번째 줄에는 자연수 N과 M이 주어집니다. N과 M은 4, 6, 8, 12, 20 중의 하나입니다.
-
-▣ 출력설명
-첫 번째 줄에 답을 출력합니다.
-
-▣ 입력예제 1
-46
-
-▣ 출력예제 1
-567
-
-### 🍕 내가 짠 코드
-
-```python
-a,b = map(int, input().split())
-cnt = list(range(1, a+b+1))
-cnt = [0 for i in range(a+b+1)]
-for i in range(1, a+1):
-    for j in range(1, b+1):
-        cnt[i+j]+=1
-
-print(cnt)
-print(max(cnt))
-
-max = 0
-res = []
-
-for index, value in enumerate(cnt):
-    print(index, value)
-    if value>max:
-        max = value
-    elif max==value:
-        
-print(res)
-```
-
 ### 🍕 정답 코드
 
 ```python
@@ -322,52 +251,15 @@ for i in range(n+m+1):
 ```
 
 ### 📝 3. 배운점 
-cnt배열에 한번에 넣을 생각을 못했따…
-
-for 문 여러개 써서 구할 생각도 못했다..
-
-단순하게 생각하자..
+1. cnt배열에 한번에 넣을 생각을 못했다.
+2. for 문 여러개 써서 구할 생각도 못했다.
+3. 단순하게 생각하자..
 
 # 🍒 6. 자릿수의 합
 
 N개의 자연수가 입력되면 각 자연수의 자릿수의 합을 구하고, 그 합이 최대인 자연수를 출력
 하는 프로그램을 작성하세요. 각 자연수의 자릿수의 합을 구하는 함수를 def digit_sum(x)를
 꼭 작성해서 프로그래밍 하세요.
-
-▣ 입력설명
-첫 줄에 자연수의 개수 N(3<=N<=100)이 주어지고, 그 다음 줄에 N개의 자연수가 주어진다.
-각 자연수의 크기는 10,000,000를 넘지 않는다.
-
-▣ 출력설명
-자릿수의 합이 최대인 자연수를 출력한다. 자릿수의 합이 같을 경우 입력순으로 먼저인 숫자
-를 출력합니다.
-
-▣ 입력예제 1
-3
-125 15232 97
-
-▣ 출력예제 1
-97
-
-### 🍕 내가 짠 코드
-
-```python
-N = int(input())
-a = list(map(int, input().split()))
-
-b=[]
-for i in a:
-    b.append(str(i))
-print(b)
-
-sum=[]
-for i in b:
-    for j in range(len(i)):
-        sum[i]+=i[j]
-print(sum)
-```
-
-`TypeError: list indices must be integers or slices, not str`
 
 ### 🍕 답안코드1
 
@@ -421,25 +313,13 @@ for x in a:
 print(res)
 ```
 
-
 # 🍒 7. 소수(에라토스테네스 체)
 
 자연수 N이 입력되면 1부터 N까지의 소수의 개수를 출력하는 프로그램을 작성하세요.
 만약 20이 입력되면 1부터 20까지의 소수는 2, 3, 5, 7, 11, 13, 17, 19로 총 8개입니다.
 제한시간은 1초입니다.
 
-▣ 입력설명
-첫 줄에 자연수의 개수 N(2<=N<=200,000)이 주어집니다.
-
-▣ 출력설명
-첫 줄에 소수의 개수를 출력합니다.
-
-- ▣ 입력예제 1
-20
-- ▣ 출력예제 1
-8
-
-### 🍕 
+### 🍕 정답 코드
 ```python
 # 1. input으로 입력값 받아오기
 n = int(input())
@@ -466,55 +346,6 @@ N개의 자연수가 입력되면 각 자연수를 뒤집은 후 그 뒤집은 �
 한다. 단 910를 뒤집으면 19로 숫자화 해야 한다. 첫 자리부터의 연속된 0은 무시한다.
 뒤집는 함수인 def reverse(x) 와 소수인지를 확인하는 함수 def isPrime(x)를 반드시 작성하
 여 프로그래밍 한다.
-
-▣ 입력설명
-첫 줄에 자연수의 개수 N(3<=N<=100)이 주어지고, 그 다음 줄에 N개의 자연수가 주어진다.
-각 자연수의 크기는 100,000를 넘지 않는다.
-
-▣ 출력설명
-첫 줄에 뒤집은 소수를 출력합니다. 출력순서는 입력된 순서대로 출력합니다.
-
-▣ 입력예제 1
-5
-32 55 62 3700 250
-
-▣ 출력예제 1
-23 73
-
-### 🍕 내가 작성한 코드
-
-```python
-n = int(input())
-numbers = list(map(int, input().split()))
-
-def reverse(x):
-    a = []
-    for i in x:
-        a.append(i)
-    a.reverse()
-    revNum="".join(a)
-    revNum=int(revNum)
-    return revNum
-
-def isPrime(x):
-    for i in range(2, x):
-        if x%i==0:
-            return 0
-        return x
-
-cnt = []
-for i in numbers:
-    cnt.append(isPrime(reverse(i)))
-print(cnt)
-```
-
-→ 하나의 함수들은 동작이 잘 되었는데 둘이 같이 쓰려니까 type오류 나고 해결이 안됨…
-
-→reverse 함수는 문자열로 변경해서 reverse시킴
-
-→Prime 함수는 return값을 어떻게 해줘야할지 모르겠어서 소수면 자기 자신을 반환하게끔함..
-
-→ 마지막에 어떻게 처리해야할지 생각 안하고 함수짜니까 더 안됨
 
 ### 🍕정답코드
 
@@ -545,11 +376,11 @@ for x in a:
         print(tmp, end=' ')
 ```
 
-reverse함수는 10으로 나눠서 1의 자리가 제일 먼저 res에 들어가서 계속해서 자리수가 커지게끔 설정
+### 📝 배운점
 
-isPrime함수는 true, false로 return 값을 줌. 범위는 2와 자기자신의 절반 까지만 살펴보기
-
-isPrime함수에서 true값을 반환한 것만 출력되도록 구현
+1. reverse함수는 10으로 나눠서 1의 자리가 제일 먼저 res에 들어가서 계속해서 자리수가 커지게끔 설정
+2. isPrime함수는 true, false로 return 값을 줌. 범위는 2와 자기자신의 절반 까지만 살펴보기
+3. isPrime함수에서 true값을 반환한 것만 출력되도록 구현
 
 # 🍒 9. 주사위 게임
 
@@ -567,57 +398,6 @@ isPrime함수에서 true값을 반환한 것만 출력되도록 구현
 
 N 명이 주사위 게임에 참여하였을 때, 가장 많은 상금을 받은 사람의 상금을 출력하는 프로그램
 을 작성하시오
-
-▣ 입력설명
-첫째 줄에는 참여하는 사람 수 N(2<=N<=1,000)이 주어지고 그 다음 줄부터 N개의 줄에 사람
-들이 주사위를 던진 3개의 눈이 빈칸을 사이에 두고 각각 주어진다.
-
-▣ 출력설명
-첫째 줄에 가장 많은 상금을 받은 사람의 상금을 출력한다.
-
-▣ 입력예제 1
-3
-
-336
-222
-625
-
-▣ 출력예제 1
-12000
-
-### 🍕 내가 작성한 코드
-
-```python
-n = int(input())
-money=[]
-for i in range(n):
-    
-    a,b,c = map(int, input().split())
-    if(a==b)&(c==a):
-        money.append(10000+a*1000)
-    elif a==b:
-        money.append(1000+a*100)
-    elif b==c:
-        money.append(1000+b*100)
-    elif a==c:
-        money.append(1000+a*100)
-    else: 
-        m=0
-        if a>b:
-            if a>c:
-                m=a
-            else: 
-                m=c
-        else: 
-            if b>c:
-                m=b
-            else:
-                m=c
-        money.append(m*1000)
-
-print(money)
-print(max(money))
-```
 
 ### 🍕 정답 코드
 
@@ -640,7 +420,7 @@ for i in range(n):
         res=money
 print(res)
 ```
-### 배운점
+### 📝 배운점
 1. a,b,c를 처음부터 sort해준 상태로 배열에 넣어주어서 크기 순으로 정리해둠
 2. & 연산자 아니라 and 연산자임…
 3. 최댓값 구할 때도 변수를 사용해서 구해줌! 하나하나 비교해서 코드 길게 
@@ -665,39 +445,6 @@ OX 문제는 맞거나 틀린 두 경우의 답을 가지는 문제를 말한다
 
 시험문제의 채점 결과가 주어졌을 때, 총 점수를 계산하는 프로그램을 작성하시오.
 
-▣ 입력설명
-첫째 줄에 문제의 개수 N (1 ≤ N ≤ 100)이 주어진다. 둘째 줄에는 N개 문제의 채점 결과를 나
-타내는 0 혹은 1이 빈 칸을 사이에 두고 주어진다. 0은 문제의 답이 틀린 경우이고, 1은 문제의
-답이 맞는 경우이다.
-
-▣ 출력설명
-첫째 줄에 입력에서 주어진 채점 결과에 대하여 가산점을 고려한 총 점수를 출력한다.
-
-▣ 입력예제 1
-10
-1011100110
-
-▣ 출력예제 1
-10
-
-### 🍕 내가 짠 코드
-
-```python
-n = int(input())
-a = list(map(int, input().split()))
-
-cnt = 0
-score = 0
-
-for x in a:
-    if x==1:
-        score=cnt+score+1
-        cnt+=1
-    elif x==0:
-        cnt=0
-print(score)
-```
-
 ### 🍕 답안 코드
 
 ```python
@@ -716,9 +463,9 @@ for x in a:
 print(score)
 ```
 
-### 배운점
-- cnt +=1 코드를 앞에 쓰면 score 구하는 코드가 짧아짐!
-- 누적된 값을 구할 때 짧게 쓰기
+### 📝 배운점
+1. cnt +=1 코드를 앞에 쓰면 score 구하는 코드가 짧아짐!
+2. 누적된 값을 구할 때 짧게 쓰기
 ```Python
 a = a + b
 → a +=b
