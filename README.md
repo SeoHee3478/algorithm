@@ -29,3 +29,16 @@
 |[4. 대표값](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/02_%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84%EB%A0%A5%EA%B8%B0%EB%A5%B4%EA%B8%B0#-4-%EB%8C%80%ED%91%9C%EA%B0%92)|2022.10.05|
 |[5. 정다면체](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/02_%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84%EB%A0%A5%EA%B8%B0%EB%A5%B4%EA%B8%B0#-5-%EC%A0%95%EB%8B%A4%EB%A9%B4%EC%B2%B4)|2022.10.05|
 |[6. 자릿수의 합](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/02_%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84%EB%A0%A5%EA%B8%B0%EB%A5%B4%EA%B8%B0#-6-%EC%9E%90%EB%A6%BF%EC%88%98%EC%9D%98-%ED%95%A9)|2022.10.05|
+|[7. 소수(에라토스테네스 체)](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/02_%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84%EB%A0%A5%EA%B8%B0%EB%A5%B4%EA%B8%B0#-6-%EC%9E%90%EB%A6%BF%EC%88%98%EC%9D%98-%ED%95%A9)|2022.10.06|
+|[8. 뒤집은 소수](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/02_%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84%EB%A0%A5%EA%B8%B0%EB%A5%B4%EA%B8%B0#-6-%EC%9E%90%EB%A6%BF%EC%88%98%EC%9D%98-%ED%95%A9)|2022.10.07|
+|[9. 주사위게임](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/02_%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84%EB%A0%A5%EA%B8%B0%EB%A5%B4%EA%B8%B0#-6-%EC%9E%90%EB%A6%BF%EC%88%98%EC%9D%98-%ED%95%A9)|2022.10.07|
+|[10. 점수계산](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/02_%EC%BD%94%EB%93%9C%EA%B5%AC%ED%98%84%EB%A0%A5%EA%B8%B0%EB%A5%B4%EA%B8%B0#-6-%EC%9E%90%EB%A6%BF%EC%88%98%EC%9D%98-%ED%95%A9)|2022.10.07|
+
+## 3. 탐색과 시뮬레이션(String, 1차원, 2차원 리스트 탐색)
+|제목|날짜|
+|------|---|
+|[1. 회문 문자열 검사](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/03_%ED%83%90%EC%83%89%EA%B3%BC%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98#1-%ED%9A%8C%EB%AC%B8-%EB%AC%B8%EC%9E%90%EC%97%B4-%EA%B2%80%EC%82%AC)|2022.10.07|
+|[2. 숫자만 추출](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/03_%ED%83%90%EC%83%89%EA%B3%BC%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98#2-%EC%88%AB%EC%9E%90%EB%A7%8C-%EC%B6%94%EC%B6%9C)|2022.10.08|
+|[3. 카드 역배치](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/03_%ED%83%90%EC%83%89%EA%B3%BC%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98#3-%EC%B9%B4%EB%93%9C-%EC%97%AD%EB%B0%B0%EC%B9%98)|2022.10.08|
+|[4. 두 리스트 합치기](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/03_%ED%83%90%EC%83%89%EA%B3%BC%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98#4-%EB%91%90-%EB%A6%AC%EC%8A%A4%ED%8A%B8-%ED%95%A9%EC%B9%98%EA%B8%B0)|2022.10.08|
+|[5. 수들의 합](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/03_%ED%83%90%EC%83%89%EA%B3%BC%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98#5-%EC%88%98%EB%93%A4%EC%9D%98-%ED%95%A9)|2022.10.08|
