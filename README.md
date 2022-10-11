@@ -42,3 +42,7 @@
 |[3. 카드 역배치](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/03_%ED%83%90%EC%83%89%EA%B3%BC%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98#3-%EC%B9%B4%EB%93%9C-%EC%97%AD%EB%B0%B0%EC%B9%98)|2022.10.08|
 |[4. 두 리스트 합치기](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/03_%ED%83%90%EC%83%89%EA%B3%BC%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98#4-%EB%91%90-%EB%A6%AC%EC%8A%A4%ED%8A%B8-%ED%95%A9%EC%B9%98%EA%B8%B0)|2022.10.08|
 |[5. 수들의 합](https://github.com/SeoHee3478/algorithm/tree/main/Algorithm_python/03_%ED%83%90%EC%83%89%EA%B3%BC%EC%8B%9C%EB%AE%AC%EB%A0%88%EC%9D%B4%EC%85%98#5-%EC%88%98%EB%93%A4%EC%9D%98-%ED%95%A9)|2022.10.08|
+
+# 2. C++ 기반 자료구조 및 알고리즘 유형별 학습(feat. 김태원)
+- 코딩테스트 문제 유형에 따른 접근법 학습
+
