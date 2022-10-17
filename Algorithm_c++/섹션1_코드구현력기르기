@@ -1,0 +1,189 @@
+# 1. 1부터 N까지의 M의 배수의 합
+
+```python
+#include <iostream>
+using namespace std;
+int main(){
+    int n,m,i,sum=0;
+    cin>>n>>m; //n,m을 입력받음
+    for(i=1;i<=n;i++){
+        if(i%m==0){
+            sum=sum+i;
+        }
+    }
+    cout<<sum;
+    return 0;
+}
+```
+
+자연수 N이 입력되면 1부터 N까지의 수 중 M의 배수합을 출력하는 프로그램을 작성하세요.
+
+# 2. 자연수의 합
+
+```python
+#include <iostream>
+using namespace std;
+int main(){
+    int a, b, i, sum=0;
+    cin>>a>>b;
+    for(i=a;i<b;i++){
+        cout<<i<<" + ";
+        sum=sum+i;
+    }
+    cout<<i<<" = ";
+    cout<<sum+i;
+    
+    return 0;
+}
+```
+
+# 3. 진약수의 합
+
+진약수란? 자기자신을 제외한 양의 약수
+
+```python
+#include <iostream>
+using namespace std;
+int main(){
+    int n,i,sum=1;
+    cin>>n;
+    cout<<"1";
+    for(i=2;i<n;i++){
+        if(n%i==0){
+            cout<<" + "<<i;
+            sum=sum+i;
+        }
+    }
+    cout <<" = "<<sum;
+    return 0;
+}
+```
+
+# 4. 나이 차이
+
+```python
+#include <iostream>
+using namespace std;
+int main(){
+    int n,i, a, max=-2147000000, min=2147000000;
+    cin>>n;
+    for(i=1;i<=n;i++){
+        cin>>a;
+        if(a>max) max=a;
+        if(a<min) min=a;
+    }
+    cout<<max-min;
+}
+```
+
+가장 큰 수는 구하려면 max에 -214700000
+
+가장 작은 수 구하려면 min에 2147000000
+
+# 5. 주민번호로 나이 구하기
+
+```python
+//    char a[20];
+//    int year, age;
+//    scanf("%s", &a); //a의 위치로 들어와라, 문자열로 받아들임 주의
+//    if(a[7]=='1'||a[7]=='2') year=1900+((a[0]-48)*10+(a[1]-48));
+//    else year=2000+((a[0]-48)*10+(a[1]-48));
+//    age=2022-year+1;
+//    printf("%d ",age);
+//
+//    if(a[7]=='1'||a[7]=='3') printf("M\n");
+//    else printf("W\n");
+//
+//    return 0;
+```
+
+[기억할 것]
+
+아스키 넘버
+
+‘A’ 65
+
+‘Z’ 90
+
+A~Z 까지 1씩 증가
+
+‘a’ 97
+
+‘z’ 122
+
+숫자는
+
+‘0’ 48
+
+‘9’ 57
+
+1. 배열에 주민번호 담기
+2. a[7]의 숫자를 확인해서 1이나 2이면 20세기에 태어난 사람들 나이 구하기 
+    
+    3이나 4이면 21세기에 태어난 사람들 나이 구하기
+    
+3. a[7]숫자 확인해서 남자 여자 구분하기
+
+# 6. 숫자만 추출
+
+c++ 문자열 배열에는
+
+a[] 배열에
+
+index: 0 1 2 3 4 5 6 7
+
+value: s t u d e n t \0
+
+마지막값에는 \0이 들어있음!!!
+
+```python
+#include <stdio.h>
+int main(){
+    char a[100];
+    int i,res=0, cnt=0;
+    scanf("%s", &a);
+    for(i=0;a[i]!='\0';i++){
+        if(a[i]>=48 && a[i]<=57){
+            res=res*10+(a[i]-48);
+        }
+    }
+    printf("%d\n", res);
+    
+    for(i=1;i<=res;i++){
+        if(res%i==0) cnt++;
+    }
+    printf("%d\n", cnt);
+    return 0;
+}
+```
+
+1. 배열 값 읽어들어오기
+    1. 
+    
+    ```python
+    char a[100];
+    scanf("%s", &a);
+    ```
+    
+2. 끝날 때 `a[i]!='\0'` 사용해서 배열의 끝가지 탐색
+3. a[i] 48 이상이고 57 이하인 경우를 찾는 이유는 아스키코드로 문자열 ‘0’의 값이 48이고 ‘9’의 값이 57이기 때문이다.
+
+# 9. 모두의 약수
+
+```python
+#include <iostream>
+int cnt[50001];
+int main(){
+    int n, i, j;
+    scanf("%d", &n);
+    for(i=1;i<=n;i++){
+        for(j=1;j<=n;j=j+i){
+            cnt[j]++;
+        }
+    }
+    for(i=1;i<=n;i++){
+        printf("%d ", cnt[i]);
+    }
+    return 0;
+}
+```
