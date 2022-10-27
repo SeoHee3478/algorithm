@@ -171,3 +171,172 @@ while True:
         lt+=1
 print(cnt)
 ```
+
+# 6. 격자판 최대합
+
+N*N의 격자판이 주어지면 각 행의 합, 각 열의 합, 두 대각선의 합 중 가 장 큰 합을 출력합 니다.
+
+```python
+n=int(input())
+a=[list(map(int, input().split())) for _ in range(n)] #2차원 배열을 한번에 읽어들이는 법
+
+largest=-2147000000 #가장 작은 값으로 초기화
+
+for i in range(n): #0행부터 n-1행까지, 각 행의 합, 각 열의 합 구하기
+    rowSum=colSum=0
+    for j in range(n):
+        rowSum+=a[i][j]
+        colSum+=a[j][i]
+    if rowSum>largest:
+        largest=rowSum
+    if colSum>largest:
+        largest=colSum
+
+#대각선의 합
+rowSum=colSum=0
+for i in range(n):
+    rowSum+=a[i][i]
+    colSum+=a[i][n-i-1]
+if rowSum>largest:
+    largest=rowSum
+if colSum>largest:
+    largest=colSum
+
+print(largest)
+```
+
+1. 각 행의 합, 열의 합 구하기
+2. 대각선의 합 구하기
+
+주의할점!
+
+최솟값, 최댓값을 비교할 때 한 배열에 넣고 이후에 비교하려고 하지말고
+
+수를 구하는 과정에서 바로 최솟값 최댓값을 구하기!
+
+2차원 배열 한번에 입력하는 방법도 외워두기!
+
+# 7. 사과나무(다이아몬드)
+
+현수의 농장은 N*N 격자판으로 이루어져 있으며, 각 격자안에는 한 그루의 사과나무가 심어저 있다. N의 크기는 항상 홀수이다. 가을이 되어 사과를 수확해야 하는데 현수는 격자판안의 사 과를 수확할 때 다이아몬드 모양의 격자판만 수확하고 나머지 격자안의 사과는 새들을 위해서 남겨놓는다.
+만약 N이 5이면 아래 그림과 같이 진한 부분의 사과를 수확한다. 현수과 수확하는 사과의 총 개수를 출력하세요.
+
+```python
+n = int(input())
+a=[list(map(int, input().split())) for _ in range(n)]
+
+s=e= n//2
+
+res=0
+for i in range(n):
+    for j in range(s,e+1):
+        res+=a[i][j]
+    if i<n//2:
+        s-=1
+        e+=1
+    else:
+        s+=1
+        e-=1
+print(res)
+```
+
+1. s와 e 포인터를 두어서 다이아몬드 끝 값을 설정해줌
+- 절반보다 위에있는 상황 일 때는 s의 값은 줄여주고 e의 값은 증가시켜줌
+- 절반보다 아래에 있을 때는 s의 값은 감소시켜주고 e의 값은 감소시켜줌
+
+# 8. 곶감문제
+
+```python
+n = int(input())
+a = [list(map(int, input().split()))for _ in range(n)]
+m=int(input())
+# 회전시켜서 새로운 배열 다시 만들기
+for i in range(m):
+    h, t, k=map(int, input().split())
+    if t==0: #왼쪽으로 도는 거라면!
+        for _ in range(k):
+            a[h-1].append(a[h-1].pop(0))#제일 앞에 있는 값 pop해주고 그것을 뒤에 추가해주기
+    else: #오른쪽으로 도는 거라면!
+        for _ in range(k):
+            a[h-1].insert(0, a[h-1].pop())#제일 뒤에있는 값 pop해주고 그것을 맨 앞에 추가해주기
+
+#모래시계 모양의 합들 더해주기, s&e 변수를 새로 생성해서 만들기!
+res=0
+s=0
+e=n-1
+for i in range(n):
+    for j in range(s,e+1):
+        res+=a[i][j]
+    if i<n//2:
+        s+=1
+        e-=1
+    else:
+        s-=1
+        e+=1
+        
+print(res)
+```
+
+1. append함수는 제일 뒤에 원소를 추가해주고 insert는 두개의 파라미터를 받아 원하는 위치에 원소를 추가할 수 있다.
+2. 모래시계, 다이아몬드 모양의 2차원 배열 합을 더할 때는 새로운 변수 s, e를 생성해서 1씩 증가시켜주거나 감소시켜주는 방식으로 계산하자
+
+# 9. 봉우리
+
+```python
+dx=[-1,0,1,0]
+dy=[0,1,0,-1]
+n = int(input())
+a=[list(map(int, input().split()))for _ in range(n)]
+a.insert(0, [0]*n)#윗 줄에 0 추가
+a.append([0]*n)#아랫 줄에 0 추가
+
+for x in a:#x는 하나의 행을 가르키고 모든 행을 순회함
+    x.insert(0, 0) #왼쪽에 0 추가
+    x.append(0) #오른쪽에 0 추가
+
+cnt=0
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        if all(a[i][j]>a[i+dx[k]][j+dy[k]] for k in range(4)): 
+        #i와 j에서 변화하는 값을 배열에 넣어주어서 for문으로 처리...
+        # if a[i][j]>a[i-1][j] and a[i][j]>a[i+1][j] and a[i][j]>a[i][j-1] and a[i][j]>a[i][j+1]:
+            cnt+=1
+print(cnt)
+```
+
+insert는 배열 넣는 위치를 지정할 수 있음
+
+append는 끝에 넣을 수 있음
+
+python의 all 문법 모든 조건이 참이여만 실행함
+
+배열 뒤에 for문 사용할 수 있다…
+
+# 10. 스도쿠검사
+
+```python
+def check(a):
+    for i in range(9):
+        ch1=[0]*9 #행 비교 배열
+        ch2=[0]*9 #열 비교 배열
+        for j in range(9):
+            ch1[a[i][j]]=1
+            ch2[a[j][i]]=1
+        if sum(ch1)!=9 or sum(ch2)!=9:
+            return False
+    for i in range(3): #9칸 검사 4중 for문
+        for j in range(3):
+            ch3=[0]*10
+            for k in range(3):
+                for s in range(3):
+                    ch3[a[i*3+k][j*3+s]]=1
+            if sum(ch3)!=9:
+                return False
+    return True
+
+a=[list(map(int, input().split())) for _ in range(9)]
+if check(a):
+    print("YES")
+else:
+    print("NO")
+```
